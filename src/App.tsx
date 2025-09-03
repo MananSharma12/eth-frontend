@@ -4,6 +4,7 @@ import { useAccount, useConnect, useDisconnect, useReadContract, WagmiProvider }
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 import { USDT, USDT_Address } from './ABIs'
+import {AllowUSDT} from "./AllowUSDT.tsx";
 
 const queryClient = new QueryClient()
 
@@ -12,6 +13,7 @@ function App() {
     <WagmiProvider config={config}>
       <QueryClientProvider client={queryClient}>
         <ConnectWallet />
+        <AllowUSDT />
       </QueryClientProvider>
     </WagmiProvider>
   )
